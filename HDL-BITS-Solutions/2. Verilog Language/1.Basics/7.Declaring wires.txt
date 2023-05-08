@@ -1,0 +1,16 @@
+`default_nettype none
+module top_module(
+    input a,
+    input b,
+    input c,
+    input d,
+    output out,
+    output out_n   ); 
+    
+    wire and_in,and_in1;
+    assign and_in=a&b;
+    assign and_in1=c&d;
+    assign out=and_in|and_in1;
+    assign out_n=~(and_in|and_in1);
+
+endmodule
